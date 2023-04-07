@@ -40,3 +40,8 @@ $(".owl-banner").owlCarousel({
     nav: true,
     navText: ["<img src='public/icons/ico-arrow.png'>", "<img src='public/icons/ico-arrow.png'>"]
 });
+
+// WOW
+new WOW().init({
+    mobile: false,
+});

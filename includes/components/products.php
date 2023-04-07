@@ -6,7 +6,7 @@
                 <h2 class="main-title">Os nossos <span>destaques</span></h2>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4 wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
                 <div class="products-card">
                     <h3 class="main-subtitle">Fabricação de móveis personalizados</h3>
 
@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4 wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
                 <div class="products-card">
                     <h3 class="main-subtitle">Venda de móveis prontos em madeira</h3>
 
@@ -42,7 +42,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 d-none d-lg-block">
+            <div class="col-lg-4 d-none d-lg-block wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0.6s">
                 <div class="products-card">
                     <h3 class="main-subtitle">Fabricação de portas e janelas e estruturas </h3>
 

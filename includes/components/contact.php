@@ -1,7 +1,7 @@
 <section class="parallax-section">
     <div class="container-xxl">
         <div class="row">
-            <div class="col-12 col-md-7 col-lg-7 col-xl-5">
+            <div class="col-12 col-md-7 col-lg-7 col-xl-5 wow bounceInLeft" data-wow-duration="2s">
                 <form class="parallax-form">
                     <h2 class="main-title-white">
                         Entre em contato conosco

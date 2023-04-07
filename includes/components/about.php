@@ -7,7 +7,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 wow bounceInUp" data-wow-duration="2s">
                 <h2 class="main-title">O que nós <span>fazemos</span></h2>
 
                 <p class="main-text">
