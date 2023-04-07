@@ -1,0 +1,36 @@
+.products {
+    &-card {
+        padding: 20px;
+        background-color: $light-color-2;
+        border-radius: 12px;
+        margin-bottom: 16px;
+
+        .main-subtitle {
+            margin-bottom: 16px;
+        }
+
+        &-img {
+            margin-bottom: 16px;
+            @include width-height(100%, auto);
+
+            img {
+                object-fit: contain;
+                @include width-height(100%, auto);
+            }
+        }
+
+        .main-text {
+            margin-bottom: 16px;
+        }
+
+        @media (#{$md-desktop}) {
+            background-color: $light-color-1;
+            box-shadow: $standard-box-shadow;
+            transition: $standard-transition;
+
+            &:hover {
+                background-color: $light-color-2;
+            }
+        }
+    }
+}

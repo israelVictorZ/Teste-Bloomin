@@ -1,0 +1,141 @@
+.banner {
+    &-section {
+        padding: 0;
+
+        .owl-banner {
+            .owl-nav, .owl-dots {
+                display: none;
+            }
+
+            @media (#{$tablet}) {
+                position: relative;
+
+                .owl-nav {
+                    position: absolute;
+                    top: 50%;
+                    left: 20px;
+                    transform: translateY(-50%);
+                    display: block;
+                    @include standard-flex(flex-end, center);
+                    @include width-height(calc(100% - 40px), auto);
+
+                    .owl-prev {
+                        display: none;
+                    }
+                }
+            }
+
+            @media (#{$md-desktop}) {
+                .owl-nav {
+                    left: 60px;
+                    @include width-height(calc(100% - 120px), auto);
+                }
+
+                .owl-dots {
+                    position: absolute;
+                    bottom: 40px;
+                    left: 60px;
+                    display: flex;
+
+                    .owl-dot {
+                        position: relative;
+                        border: 2px solid $main-color;
+                        margin-right: 8px;
+                        border-radius: 4px;
+                        overflow: hidden;
+                        @include width-height(20px, 20px);
+
+                        span {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-color: $main-color;
+                            transform: translateX(-100%);
+                            transition: $standard-transition;
+                            @include width-height(100%, 100%);
+                        }
+
+                        &.active {
+                            span {
+                                transform: translateX(0);
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media (#{$lg-desktop}) {
+                .owl-nav {
+                    left: 80px;
+                    @include width-height(calc(100% - 160px), auto);
+                }
+
+                .owl-dots {
+                    left: 80px;
+                }
+            }
+        }
+    }
+
+    &-content {
+        position: absolute;
+        top: calc(50% + 40px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include width-height(calc(100% - 24px), unset);
+
+        h1,h2, p {
+            color: $light-color-1;
+        }
+
+        h1,h2 {
+            font-size: $big-size - 8px;
+        }
+
+        @media (#{$mobile}) {
+            h1,h2 {
+                font-size: $big-size;
+                margin-bottom: 40px;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (#{$tablet}) {
+            left: 20px;
+            transform: translateY(-50%);
+            @include width-height(40%, unset);
+
+            h1, h2, p {
+                color: $main-color;
+                margin-bottom: 12px;
+            }
+        }
+
+        @media (#{$md-desktop}) {
+            left: 60px;
+
+            h1,h2 {
+                margin-bottom: 40px;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (#{$lg-desktop}) {
+            left: 80px;
+
+            h1,h2 {
+                font-size: $big-size + 20;
+            }
+
+            p {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

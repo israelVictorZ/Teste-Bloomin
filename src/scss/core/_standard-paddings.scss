@@ -1,0 +1,15 @@
+header, section, footer {
+    padding: $mobile-padding;
+
+    @media (#{$tablet}) {
+        padding: $tablet-padding;
+    }
+
+    @media (#{$md-desktop}) {
+        padding: $md-desktop-padding;
+    }
+
+    @media (#{$lg-desktop}) {
+        padding: $lg-desktop-padding;
+    }
+}

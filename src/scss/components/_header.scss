@@ -1,0 +1,288 @@
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    z-index: 999;
+    background-color: rgba($main-color, $rgb-alpha);
+    transition: $standard-transition;
+    @include width-height(100%, unset);
+
+    @media (#{$tablet}) {
+        padding: 10px 20px;
+    }
+
+    @media (#{$md-desktop}) {
+        padding: 20px 60px;
+    }
+
+    @media (#{$lg-desktop}) {
+        padding: 20px 80px;
+    }
+
+    &-brand {
+        @include width-height(150px, unset);
+
+        img {
+            @include width-height(100%, auto);
+        }
+
+        @media (#{$tablet}) {
+            @include width-height(200px, auto)
+        }
+    }
+
+    &-toggle {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        @include standard-flex(center, center);
+        @include width-height(40px, 40px);
+
+        .hamburger {
+            position: relative;
+            background-color: $light-color-1;
+            transition: $standard-transition;
+            @include width-height(100%, 3px);
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $light-color-1;
+                transition: $standard-transition;
+                @include width-height(100%, 100%);
+            }
+
+            &::before {
+                transform: translateY(-8px);
+            }
+
+            &::after {
+                transform: translateY(8px);
+            }
+        }
+
+        &.active {
+            .hamburger {
+                background-color: transparent;
+
+                &::before,
+                &::after {
+                    top: 50%;
+                    left: 50%;
+                    @include width-height(80%, 100%)
+                }
+
+                &::before {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+
+                &::after {
+                    transform: translate(-50%, -50%) rotate(135deg);
+                }
+            }
+        }
+
+        @media (#{$md-desktop}) {
+            display: none;
+        }
+    }
+
+    &-items {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $light-color-1;
+        list-style: none;
+        margin: 0;
+        padding: 0 12px;
+        transform: translateX(-100%);
+        transition: $standard-transition;
+        box-shadow: $standard-box-shadow;
+        @include width-height(100%, auto);
+
+        li {
+            @include width-height(100%, auto);
+
+            a {
+                color: $main-color;
+                padding: 20px 0;
+                text-decoration: none;
+                display: inline-block;
+                border-bottom: 1px solid rgba($main-color, $rgb-alpha);
+                font-size: $small-size;
+                @include width-height(100%, auto);
+            }
+
+            &:last-child {
+                a {
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        .dropdown {
+            &-items {
+                display: none;
+            }
+        }
+
+        &.active {
+            transform: translateX(0);
+        }
+
+        @media (#{$md-desktop}) {
+            position: unset;
+            transform: unset;
+            display: flex;
+            background-color: transparent;
+            box-shadow: unset;
+            @include width-height(auto, auto);
+
+            li {
+                margin-left: 40px;
+                @include width-height(fit-content, auto);
+
+                a {
+                    position: relative;
+                    color: $light-color-1;
+                    border-bottom: 0;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 16px;
+                        left: 0;
+                        background-color: $light-color-1;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        transition: $standard-transition;
+                        @include width-height(100%, 3px)
+                    }
+
+                    &:hover {
+                        &::after {
+                            transform-origin: right;
+                            transform: scaleX(1);
+                        }
+                    }
+
+                    &.active {
+                        font-weight: $bold-weight;
+
+                        &::after {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+
+            .dropdown {
+                &-link {
+                    position: relative;
+
+                    &:hover {
+                        .dropdown-items {
+                            top: 100%;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+
+                &-items {
+                    position: absolute;
+                    top: calc(100% + 40px);
+                    right: 0;
+                    display: block;
+                    background-color: $light-color-1;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    width: max-content;
+                    max-width: 250px;
+                    border-radius: 8px;
+                    transition: $standard-transition;
+                    overflow: hidden;
+                    opacity: 0;
+                    visibility: hidden;
+                    box-shadow: $standard-box-shadow;
+
+                    li {
+                        margin-left: 0;
+
+                        a {
+                            color: $main-color;
+                            padding: 20px;
+                            transition: $standard-transition;
+                            font-size: $small-size;
+
+                            &::after {
+                                position: absolute;
+                                bottom: 0;
+                                left: 20px;
+                                background-color: rgba($main-color, $rgb-alpha);
+                                transform: scale(1);
+                                @include width-height(calc(100% - 40px), 1px);
+                            }
+
+                            &:hover {
+                                background-color: $main-color;
+                                color: $light-color-1;
+                            }
+                        }
+
+                        &:last-child {
+                            a {
+                                &::after {
+                                    content: unset;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (#{$md-desktop}) {
+        &>div {
+            @include standard-flex(space-between, center)
+        }
+    }
+
+    &-slicked {
+        position: fixed;
+        background-color: $light-color-1;
+        box-shadow: $standard-box-shadow;
+
+        .nav-toggle {
+            .hamburger, .hamburger::before, .hamburger::after {
+                background-color: $main-color;
+            }
+
+            &.active {
+                .hamburger {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .nav-items {
+            li {
+                a {
+                    color: $main-color;
+
+                    &::after {
+                        background-color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+}

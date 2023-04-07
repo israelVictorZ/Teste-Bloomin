@@ -1,0 +1,34 @@
+.main {
+    &-title {
+        color: $main-color;
+        font-weight: $regular-weight;
+        font-size: $big-size;
+        margin-bottom: 40px;
+
+        span {
+            color: $light-color-1;
+            background-color: $main-color;
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        &-white {
+            color: $light-color-1;
+            font-weight: $regular-weight;
+            font-size: $big-size;
+            margin-bottom: 40px;
+        }
+    }
+
+    &-subtitle {
+        color: $main-color;
+        font-weight: $bold-weight;
+        font-size: $medium-size + 4px;
+    }
+
+    &-text {
+        color: $main-color;
+        font-size: $small-size;
+        font-weight: $regular-weight;
+    }
+}

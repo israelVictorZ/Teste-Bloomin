@@ -1,0 +1,33 @@
+// COLOR
+$main-color: #191818;
+$fonts-color: #000000;
+$bloomin-color: #38143F;
+$light-color-1: #FFFFFF;
+$light-color-2: #F1F1F1;
+$rgb-alpha: .4;
+
+// FONT SIZE - FONT-WEIGHT
+$small-size: 18px;
+$medium-size: 20px;
+$big-size: 36px;
+
+$regular-weight: 400;
+$bold-weight: 600;
+
+// PADDING
+$mobile-padding: 40px 0;
+$tablet-padding: 60px 20px;
+$md-desktop-padding: 60px;
+$lg-desktop-padding: 80px;
+
+// TRANSITION
+$standard-transition: .3s;
+
+// BOX-SHADOW
+$standard-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+// BREAKPOINTS
+$mobile: 'min-width: 600px';
+$tablet: 'min-width: 767px';
+$md-desktop: 'min-width: 992px';
+$lg-desktop: 'min-width: 1280px';

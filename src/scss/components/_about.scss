@@ -1,0 +1,64 @@
+.about {
+    &-section {
+        margin-top: 40px;
+        background-color: $light-color-2;
+
+        @media (#{$md-desktop}) {
+            padding-top: 32px;
+            padding-bottom: 0;
+
+            .standard-button {
+                margin-bottom: 80px;
+            }
+        }
+    }
+
+    &-img {
+        margin-top: -80px;
+        margin-bottom: 40px;
+        @include width-height(100%, auto);
+
+        img {
+            object-fit: contain;
+            @include width-height(100%, 100%);
+        }
+
+        @media (#{$md-desktop}) {
+            @include width-height(100%, 100%);
+
+            img {
+                object-fit: cover;
+                border-radius: 12px;
+            }
+        }
+    }
+
+    &-ico {
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        &-item {
+            display: flex;
+            margin-bottom: 16px;
+
+            .ico {
+                min-width: 60px;
+                padding: 8px;
+                background-color: $main-color;
+                border-radius: 4px;
+                display: block;
+                @include width-height(60px, 60px);
+
+                img {
+                    object-fit: contain;
+                    @include width-height(100%, 100%);
+                }
+            }
+
+            .title {
+                display: inline-block;
+                margin-left: 12px;
+            }
+        }
+    }
+}

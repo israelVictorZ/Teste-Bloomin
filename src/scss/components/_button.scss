@@ -1,0 +1,51 @@
+.standard-button {
+    position: relative;
+    display: inline-block;
+    border: 2px solid $main-color;
+    background-color: $main-color;
+    padding: 12px;
+    color: $light-color-1;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: $medium-size;
+    transition: $standard-transition;
+    overflow: hidden;
+
+    &-lg {
+        padding: 16px 20px;
+    }
+
+    span {
+        position: relative;
+        z-index: 12;
+    }
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 8px;
+        @include width-height(100%, 100%);
+    }
+
+    &::before {
+        background-color: $light-color-1;     
+        transform: translateX(-100%);
+        z-index: 10;
+        transition: $standard-transition linear;
+    }
+
+    &::after {
+        border: 2px solid $main-color;
+        z-index: 11;
+    }
+
+    &:hover {
+        color: $main-color;
+
+        &::before {
+            transform: translateX(0);
+        }
+    }
+}

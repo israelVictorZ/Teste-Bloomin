@@ -1,0 +1,115 @@
+.footer {
+    .centralized {
+        @include standard-flex(center, center)
+    }
+
+    .main-subtitle {
+        margin-bottom: 32px;
+    }
+
+    &-brand {
+        margin-bottom: 32px;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 12px;
+
+            a {
+                color: $fonts-color;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-address {
+        .address-item {
+            display: flex;
+            color: $fonts-color;
+            text-decoration: none;
+            margin-bottom: 16px;
+
+            .ico {
+                min-width: 30px;
+                @include width-height(30px, 30px);
+
+                img {
+                    object-fit: contain;
+                    @include width-height(100%, 100%);
+                }
+            }
+
+            .content {
+                margin-left: 12px;
+
+                strong {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &-sn {
+        .ico {
+            text-decoration: none;
+            margin-right: 8px;
+        }
+    }
+}
+
+.copyright {
+    padding: 20px 0;
+    background-color: $light-color-1;
+
+    @media (#{$tablet}) {
+        padding: 20px;
+    }
+
+    @media (#{$md-desktop}) {
+        padding: 20px 60px;
+    }
+
+    @media (#{$lg-desktop}) {
+        padding: 20px 80px;
+    }
+
+    span {
+        color: $fonts-color;
+
+        strong {
+            color: $bloomin-color;
+        }
+    }
+}
+
+.fixed-footer {
+    background-color: $light-color-2;
+
+}
+
+@media (#{$md-desktop}) {
+    main {
+        background-color: $light-color-1;
+        position: relative;
+        z-index: 2;
+    }
+
+    body {
+        padding-bottom: 560px;
+    }
+
+    .fixed-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include width-height(100%, 560px);
+    }
+}
