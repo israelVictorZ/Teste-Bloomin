@@ -1,0 +1,70 @@
+.info-cards {
+    &-img {
+
+        &-left,
+        &-right {
+            display: none;
+        }
+
+        @media (#{$md-desktop}) {
+            &-left,
+            &-right {
+                display: block;
+                position: absolute;
+                top: 0;
+                z-index: 1;
+                @include width-height(60%, 100%);
+                
+                img {
+                    object-fit: cover;
+                    border-radius: 8px;
+                    @include width-height(100%, 100%);
+                }
+            }
+
+            &-left {
+                left: 0;
+            }
+
+            &-right {
+                right: 0;
+            }
+        }
+    }
+
+    &-item {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+        background-color: $light-color-2;
+        border-radius: 8px;
+        box-shadow: $standard-box-shadow;
+        margin-bottom: 24px;
+
+        .ico {
+            margin-bottom: 20px;
+            @include standard-flex(center, center);
+            @include width-height(75px, 75px);
+        }
+
+        .main-subtitle {
+            margin-bottom: 20px;
+        }
+
+        @media (#{$md-desktop}) {
+            margin-bottom: 0;
+            @include width-height(unset, 100%);
+        }
+    }
+
+    @media (#{$md-desktop}) {
+        &-section {
+            padding-top: 0;
+
+            .row {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+        }
+    }
+}

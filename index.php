@@ -1,4 +1,8 @@
 <?php
+$title = 'MDecor - Bloomin Teste';
+$pageKeyword = 'Mdecor';
+$pageId = 'home';
+$url = 'index.php';
 
 // HEAD
 include('includes/head.php');
@@ -15,8 +19,8 @@ include('includes/components/products.php');
 // ABOUT
 include('includes/components/about.php');
 
-// CONTACT
-include('includes/components/contact.php');
+// PARALLAX
+include('includes/components/parallax.php');
 
 // FOOTER
 include('includes/components/footer.php');

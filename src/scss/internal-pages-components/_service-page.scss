@@ -1,0 +1,16 @@
+.service {
+    &-section {
+        padding-top: 0;
+    }
+
+    &-img {
+        margin: 40px 0;
+        @include width-height(100%, auto);
+
+        img {
+            object-fit: contain;
+            border-radius: 8px;
+            @include width-height(100%, 100%);
+        }
+    }
+}

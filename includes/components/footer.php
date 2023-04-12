@@ -1,3 +1,5 @@
+</main>
+
 <div class="fixed-footer">
     <footer class="footer">
 
@@ -18,10 +20,10 @@
                     <h3 class="main-subtitle">Link rápidos</h3>
 
                     <ul>
-                        <li><a href="#"> Home </a></li>
-                        <li><a href="#"> Sobre nós </a></li>
-                        <li><a href="#"> Produtos </a></li>
-                        <li><a href="#"> Contato </a></li>
+                        <li><a href="index"> Home </a></li>
+                        <li><a href="sobre-nos"> Sobre nós </a></li>
+                        <li><a href="servicos"> Produtos </a></li>
+                        <li><a href="contato"> Contato </a></li>
                         <li><a href="#"> Política de Privacidade </a></li>
                         <li><a href="#"> Mapa do site </a></li>
                     </ul>
@@ -98,6 +100,7 @@
 
 <!-- JS -->
 <script src="src/js/index.js"></script>
+<script src="src/js/whatsapp.js"></script>
 
 
 </body>

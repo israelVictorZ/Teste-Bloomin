@@ -1,4 +1,4 @@
-<section class="products-section">
+<section class="products-section <?php echo $pageId == 'single-service' ? 'pt-0' : '' ?>">
     <div class="container-xxl">
         <div class="row">
 
@@ -11,14 +11,14 @@
                     <h3 class="main-subtitle">Fabricação de móveis personalizados</h3>
 
                     <div class="products-card-img">
-                        <img src="public/services/fabricacao-de-moveis-personalizados.png" alt="">
+                        <img src="public/services/cards/fabricacao-de-moveis-personalizados.png" alt="">
                     </div>
 
                     <p class="main-text">
                         Nós fabricamos móveis de madeira sob medida para você aproveitar ao máximo seu espaço, com estilo e qualidade.
                     </p>
 
-                    <a class="standard-button" href="#">
+                    <a class="standard-button" href="fabricacao-de-moveis-personalizados">
                         <span>Veja mais</span>
                     </a>
                 </div>
@@ -29,14 +29,14 @@
                     <h3 class="main-subtitle">Venda de móveis prontos em madeira</h3>
 
                     <div class="products-card-img">
-                        <img src="public/services/venda-de-moveis-prontos-em-madeira.png" alt="">
+                        <img src="public/services/cards/venda-de-moveis-prontos-em-madeira.png" alt="">
                     </div>
 
                     <p class="main-text">
                         Nossos móveis de madeira prontos oferecem a combinação perfeita de beleza, durabilidade e praticidade.
                     </p>
 
-                    <a class="standard-button" href="#">
+                    <a class="standard-button" href="venda-de-moveis-prontos-em-madeira">
                         <span>Veja mais</span>
                     </a>
                 </div>
@@ -47,14 +47,14 @@
                     <h3 class="main-subtitle">Fabricação de portas e janelas e estruturas </h3>
 
                     <div class="products-card-img">
-                        <img src="public/services/fabricação-de-portas-janelas-e-estruturas.png" alt="">
+                        <img src="public/services/cards/fabricação-de-portas-janelas-e-estruturas.png" alt="">
                     </div>
 
                     <p class="main-text">
                     Construímos portas, janelas e estruturas em madeira para fornecer segurança e estilo para sua casa ou empresa.
                     </p>
 
-                    <a class="standard-button" href="#">
+                    <a class="standard-button" href="fabricaçao-de-portas-e-janelas-e-estruturas">
                         <span>Veja mais</span>
                     </a>
                 </div>

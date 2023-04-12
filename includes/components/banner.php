@@ -1,5 +1,3 @@
-<main>
-
 <section class="banner-section">
     <div class="owl-carousel owl-banner">
 
@@ -11,7 +9,7 @@
                 <h1>Conheça a MDecor</h1>
                 <p>Produtos de madeira de alta qualidade para a sua casa ou empresa</p>
 
-                <a class="standard-button standard-button-lg" href="#">
+                <a class="standard-button standard-button-lg" href="contato">
                     <span>Entre em contato</span>
                 </a>
             </div>
@@ -22,10 +20,10 @@
             <img class="d-none d-md-block" src="public/banners/banner-2.png" alt="">
 
             <div class="banner-content">
-                <h1>Beleza e funcionalidade em madeira</h1>
+                <h2>Beleza e funcionalidade em madeira</h2>
                 <p>Adicione charme e elegância aos seus espaços.</p>
 
-                <a class="standard-button standard-button-lg" href="#">
+                <a class="standard-button standard-button-lg" href="contato">
                     <span>Entre em contato</span>
                 </a>
             </div>
@@ -36,10 +34,10 @@
             <img class="d-none d-md-block" src="public/banners/banner-3.png" alt="">
 
             <div class="banner-content">
-                <h1>Móveis únicos para seu estilo único.</h1>
+                <h2>Móveis únicos para seu estilo único.</h2>
                 <p>Mostre sua personalidade em cada detalhe.</p>
 
-                <a class="standard-button standard-button-lg" href="#">
+                <a class="standard-button standard-button-lg" href="contato">
                     <span>Entre em contato</span>
                 </a>
             </div>

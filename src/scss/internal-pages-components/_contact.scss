@@ -1,0 +1,48 @@
+.contact {
+    &-section {
+        padding-top: 0;
+
+        .map-box {
+            margin-top: 40px;
+            position: relative;
+
+            iframe {
+                filter: grayscale(1);
+                transition: $standard-transition;
+                border-radius: 4px;
+                overflow: hidden;
+                box-shadow: $standard-box-shadow;
+                z-index: 2;
+
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
+
+            @media (#{$md-desktop}) {
+                margin-top: 0;
+
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: $main-color;
+                    border-radius: 8px;
+                    z-index: -1;
+                }
+
+                &::before {
+                    bottom: -30px;
+                    left: 80px;
+                    @include width-height(200px, 80px);
+                }
+
+                &::after {
+                    top: -40px;
+                    right: -40px;
+                    @include width-height(250px, 250px);
+                }
+            }
+        }
+    }
+}

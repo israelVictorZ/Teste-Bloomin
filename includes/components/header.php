@@ -11,18 +11,20 @@
         </div>
 
         <ul class="nav-items">
-            <li><a class="active" href="#"> Home </a></li>
-            <li><a href="#"> Sobre nós </a></li>
+            <li><a <?php echo $pageId == 'home' ? 'class="active"' : ''?> href="index"> Home </a></li>
+            <li><a <?php echo $pageId == 'about-us' ? 'class="active"' : ''?> href="sobre-nos"> Sobre nós </a></li>
             <li class="dropdown-link">
-                <a href="#"> Produtos </a>
+                <a <?php echo $pageId == 'single-service' ? 'class="active"' : ''?> href="servicos"> Produtos </a>
 
                 <ul class="dropdown-items">
-                    <li><a href="#"> Fabricação de móveis personalizados </a></li>
-                    <li><a href="#"> Venda de móveis prontos em madeira </a></li>
-                    <li><a href="#"> Fabricação de portas e janelas e estruturas  </a></li>
+                    <li><a href="fabricacao-de-moveis-personalizados"> Fabricação de móveis personalizados </a></li>
+                    <li><a href="venda-de-moveis-prontos-em-madeira"> Venda de móveis prontos em madeira </a></li>
+                    <li><a href="fabricaçao-de-portas-e-janelas-e-estruturas"> Fabricação de portas e janelas e estruturas  </a></li>
                 </ul>
             </li>
-            <li><a href="#"> Contato </a></li>
+            <li><a <?php echo $pageId == 'contact' ? 'class="active"' : ''?> href="contato"> Contato </a></li>
         </ul>
     </div>
 </header>
+
+<main>

@@ -18,6 +18,10 @@
             font-size: $big-size;
             margin-bottom: 40px;
         }
+
+        &.subtitle {
+            font-size: $big-size - 8px;
+        }
     }
 
     &-subtitle {
