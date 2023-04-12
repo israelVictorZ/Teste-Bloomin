@@ -2,7 +2,7 @@
 $title = 'Venda de móveis prontos em madeira | MDecor - Bloomin Teste';
 $pageKeyword = 'Venda de móveis prontos em madeira';
 $pageId = 'single-service';
-$url = 'venda-de-moveis-prontos-em-madeira.php';
+$url = 'venda-de-moveis-prontos-em-madeira';
 $breadcrumbTitle = 'Venda de móveis prontos em madeira';
 
 
@@ -13,7 +13,7 @@ include('includes/head.php');
 include('includes/components/header.php');
 
 // BREADCRUMB
-include('includes/components/breadcrumb');
+include('includes/components/breadcrumb.php');
 ?>
 
 
